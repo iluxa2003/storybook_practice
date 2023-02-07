@@ -1,0 +1,25 @@
+.button {
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  min-width: 47px;
+  border: none;
+}
+.button_icon {
+  height: 16px;
+}
+.button_icon.left_side {
+  position: absolute;
+  top: auto;
+  left: 18px;
+}
+
+.button_icon.center ~ .button_text {
+  font-weight: 400;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+.button_icon.none {
+  display: none;
+}
