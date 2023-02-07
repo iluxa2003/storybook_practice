@@ -14,11 +14,12 @@
   margin: 30px;
   appearance: none;
   width: 247px;
+  border-radius: 15px;
 }
 .range_input::-webkit-slider-runnable-track {
   height: 4px;
-  border-radius: 4px;
   background-color: #007aff;
+  border-radius: 15px;
   cursor: pointer;
 }
 .range_input:focus {

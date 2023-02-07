@@ -13,20 +13,42 @@
   letter-spacing: 0.15px;
 }
 .search_sign {
+  width: 16px;
+  height: 16px;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: 103px;
-  color: black;
+  filter: brightness(0) saturate(100%) invert(87%) sepia(31%) saturate(26%)
+    hue-rotate(315deg) brightness(87%) contrast(91%);
 }
 .search_wrap {
+  display: inline;
   position: relative;
 }
-.search:focus-visible {
+.search.focused {
   width: 263px;
   padding: 11px 40px;
   outline: none;
 }
-.search:focus-visible.search_sign {
+.search.focused::placeholder {
+  color: #000000;
+}
+.search.focused ~ .search_sign {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(2%) saturate(16%)
+    hue-rotate(5deg) brightness(102%) contrast(100%);
   position: absolute;
   left: 18px;
+}
+
+.close_button {
+  display: none;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  cursor: pointer;
+  top: -1px;
+  right: 12px;
+}
+.search.focused ~ .close_button {
+  display: block;
 }
