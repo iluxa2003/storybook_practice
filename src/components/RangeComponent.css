@@ -11,7 +11,7 @@
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
 }
 .range_input {
-  margin: 30px;
+  margin: 0;
   appearance: none;
   width: 247px;
   border-radius: 15px;
@@ -26,11 +26,23 @@
   outline: none;
 }
 .range_wrapper {
+  position: relative;
   display: inline;
+  margin: 30px;
+
   appearance: none;
 }
 .range_number {
   position: absolute;
-  top: auto;
-  left: 3%;
+  pointer-events: none;
+  top: 7%;
+  left: 4.5%;
+}
+.range_element {
+  display: flex;
+  justify-content: space-around;
+  margin: 8px 0px;
+}
+.range_component {
+  width: fit-content;
 }
