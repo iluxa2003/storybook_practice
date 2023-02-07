@@ -1,3 +1,4 @@
+import propTypes from "prop-types";
 const Button = ({
   label,
   onClick,
@@ -33,5 +34,11 @@ const Button = ({
       {label}
     </button>
   );
+};
+Button.propTypes = {
+  label: propTypes.string,
+  borderRadius: propTypes.string,
+  backgroundColor: propTypes.string,
+  size: propTypes.oneOf(["small", "medium", "large"]),
 };
 export default Button;

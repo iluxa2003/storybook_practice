@@ -1,16 +1,31 @@
 import styles from "./AnimatedSwitcher.module.css";
-const AnimatedSwitcher = ({ checked, background, disabled = false, func }) => {
+import CheckInput from "../UI/CheckInput";
+import propTypes from "prop-types";
+const AnimatedSwitcher = ({
+  checkedBackground,
+  checked,
+  background,
+  disabled = false,
+  func,
+}) => {
   return (
     <div>
-      <input
+      <CheckInput
         className={styles.switch}
         type="checkbox"
-        checked={checked}
         disabled={disabled}
         onChange={func}
-        style={{ background }}
+        bk={background}
+        checked={checked}
+        checkedBackground={checkedBackground}
       />
     </div>
   );
+};
+AnimatedSwitcher.propTypes = {
+  checkedBackground: propTypes.string,
+  background: propTypes.string,
+  disabled: propTypes.bool,
+  checked: propTypes.bool,
 };
 export default AnimatedSwitcher;
