@@ -1,0 +1,35 @@
+.range_input::-webkit-slider-thumb {
+  appearance: none;
+  border: 1px solid #000000;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px;
+  border: 0;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+}
+.range_input {
+  margin: 30px;
+  appearance: none;
+  width: 247px;
+}
+.range_input::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 4px;
+  background-color: #007aff;
+  cursor: pointer;
+}
+.range_input:focus {
+  outline: none;
+}
+.range_wrapper {
+  display: inline;
+  appearance: none;
+}
+.range_number {
+  position: absolute;
+  top: auto;
+  left: 3%;
+}
