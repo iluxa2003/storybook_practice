@@ -6,6 +6,7 @@ const Button = ({
   backgroundColor = "black",
   color = "white",
   borderRadius = "14px",
+  border = "0",
   size = "medium",
   margin = "5px",
   iconType = "none",
@@ -24,6 +25,7 @@ const Button = ({
   const style = {
     background: backgroundColor,
     borderRadius,
+    border,
     padding,
     color,
     margin,
@@ -46,6 +48,7 @@ const Button = ({
 };
 Button.propTypes = {
   label: propTypes.string,
+  border: propTypes.string,
   borderRadius: propTypes.string,
   backgroundColor: propTypes.string,
   color: propTypes.string,

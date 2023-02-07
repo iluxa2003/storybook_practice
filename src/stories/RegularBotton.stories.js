@@ -1,8 +1,15 @@
 import Button from "../components/Button";
 import telegram from "../img/Telegram.svg";
+import buttonIcons from "../img/button-icons";
 export default {
   title: "Button",
   component: Button,
+  argTypes: {
+    icon: {
+      options: { ...buttonIcons },
+      control: { type: "select" },
+    },
+  },
 };
 
 const Template = (args) => <Button {...args} />;
@@ -12,6 +19,15 @@ CustomButton.args = {
   label: "+",
   borderRadius: "50%",
   backgroundColor: "blue",
+};
+
+export const MediumIconButton = Template.bind({});
+MediumIconButton.args = {
+  size: "medium",
+  color: "black",
+  icon: buttonIcons.umbrella,
+  iconType: "center",
+  backgroundColor: "#F2F2F7",
 };
 
 export const LargeBlackButton = Template.bind({});

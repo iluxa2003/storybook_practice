@@ -7,6 +7,7 @@ const RangeComponent = ({
   max = 100,
   step = 1,
   showRange = false,
+  currentValue = false,
 }) => {
   const [range, setRange] = useState(0);
   const style = {
@@ -31,12 +32,14 @@ const RangeComponent = ({
           step={step}
           style={style}
         />
-        <span
-          className={"range_number"}
-          style={{ left: 4 + range * 0.85 + "%" }}
-        >
-          {range}
-        </span>
+        {currentValue && (
+          <span
+            className={"range_number"}
+            style={{ left: 4 + range * 0.85 + "%" }}
+          >
+            {range}
+          </span>
+        )}
       </div>
       {showRange && (
         <div className="range_element">
@@ -51,6 +54,7 @@ RangeComponent.propTypes = {
   min: propTypes.number,
   max: propTypes.number,
   step: propTypes.number,
+  currentValue: propTypes.bool,
   showRange: propTypes.bool,
 };
 export default RangeComponent;

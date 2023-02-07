@@ -4,12 +4,30 @@ import Button from "./components/Button";
 import RangeComponent from "./components/RangeComponent";
 import Search from "./components/Search";
 function App() {
+  const list = [
+    {
+      label: "item1",
+      checked: true,
+    },
+    {
+      label: "item2",
+      checked: false,
+    },
+    {
+      checked: false,
+      label: "item3",
+    },
+    {
+      checked: false,
+      label: "item4",
+    },
+  ];
   return (
     <div className="App">
       <Button label={"knppochka"} />
       <AnimatedSwitcher />
 
-      {/* <BigSwitcher /> */}
+      <BigSwitcher list={list} />
       <RangeComponent />
       <Search />
     </div>
